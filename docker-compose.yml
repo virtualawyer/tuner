@@ -1,0 +1,35 @@
+services:
+  tuner:
+    image: ghcr.io/virtualawyer/tuner:latest
+    # Or build it from this folder instead of pulling:
+    # build: .
+    container_name: tuner
+    restart: unless-stopped
+
+    ports:
+      - "8770:8770"
+
+    volumes:
+      # Config and the SQLite database.
+      # MUST be a normal Linux filesystem (ext4, xfs, btrfs). Never point it
+      # at an exFAT or FAT drive: they have no file locking and SQLite
+      # corrupts there. The container refuses to start inside the library.
+      - /opt/tuner:/config
+
+      # The video library, the same folder Jellyfin reads.
+      # Change the left side to the folder that actually exists, capitals
+      # included. Leave the right side alone: config.json refers to it.
+      - /srv/media/YouTube:/media/youtube
+
+    # Ask for a password on every page (any user name works):
+    # environment:
+    #   - TUNER_PASSWORD=change-me
+
+    # Runs as root so it can write to drives mounted for another user. To
+    # run as the user that owns the library instead, uncomment:
+    # user: "1000:1000"
+
+    # ffmpeg remuxing can take a whole small machine. Keep some for
+    # Jellyfin and anything else on the box.
+    cpus: 1.5
+    mem_limit: 1g

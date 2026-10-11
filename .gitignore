@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+dist/
+
+# Runtime state, never part of the repo.
+*.db
+*.db-wal
+*.db-shm

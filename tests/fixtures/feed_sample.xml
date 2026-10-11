@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns:yt="http://www.youtube.com/xml/schemas/2015"
+      xmlns:media="http://search.yahoo.com/mrss/"
+      xmlns="http://www.w3.org/2005/Atom">
+  <link rel="self" href="http://www.youtube.com/feeds/videos.xml?channel_id=UCabcdefghijklmnopqrstuv"/>
+  <id>yt:channel:UCabcdefghijklmnopqrstuv</id>
+  <yt:channelId>UCabcdefghijklmnopqrstuv</yt:channelId>
+  <title>Alpha Channel</title>
+  <link rel="alternate" href="https://www.youtube.com/channel/UCabcdefghijklmnopqrstuv"/>
+  <author>
+    <name>Alpha Channel</name>
+    <uri>https://www.youtube.com/channel/UCabcdefghijklmnopqrstuv</uri>
+  </author>
+  <published>2019-03-01T00:00:00+00:00</published>
+  <entry>
+    <id>yt:video:vid00000001</id>
+    <yt:videoId>vid00000001</yt:videoId>
+    <yt:channelId>UCabcdefghijklmnopqrstuv</yt:channelId>
+    <title>How a Chromebook became a 3TB NAS</title>
+    <link rel="alternate" href="https://www.youtube.com/watch?v=vid00000001"/>
+    <author>
+      <name>Alpha Channel</name>
+      <uri>https://www.youtube.com/channel/UCabcdefghijklmnopqrstuv</uri>
+    </author>
+    <published>2026-08-15T12:00:00+00:00</published>
+    <updated>2026-08-15T12:30:00+00:00</updated>
+    <media:group>
+      <media:title>How a Chromebook became a 3TB NAS</media:title>
+      <media:content url="https://www.youtube.com/v/vid00000001?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+      <media:thumbnail url="https://i4.ytimg.com/vi/vid00000001/hqdefault.jpg" width="480" height="360"/>
+      <media:description>Episode 1 of the homelab series.</media:description>
+      <media:community>
+        <media:starRating count="120" average="4.9" min="1" max="5"/>
+        <media:statistics views="4210"/>
+      </media:community>
+    </media:group>
+  </entry>
+  <entry>
+    <id>yt:video:vid00000002</id>
+    <yt:videoId>vid00000002</yt:videoId>
+    <yt:channelId>UCabcdefghijklmnopqrstuv</yt:channelId>
+    <title>Fixing exFAT &amp; the case of the vanishing permissions</title>
+    <link rel="alternate" href="https://www.youtube.com/watch?v=vid00000002"/>
+    <author>
+      <name>Alpha Channel</name>
+      <uri>https://www.youtube.com/channel/UCabcdefghijklmnopqrstuv</uri>
+    </author>
+    <published>2026-08-14T12:00:00+00:00</published>
+    <updated>2026-08-14T12:30:00+00:00</updated>
+    <media:group>
+      <media:title>Fixing exFAT &amp; the case of the vanishing permissions</media:title>
+      <media:content url="https://www.youtube.com/v/vid00000002?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+      <media:thumbnail url="https://i4.ytimg.com/vi/vid00000002/hqdefault.jpg" width="480" height="360"/>
+      <media:description>Episode 2 of the homelab series.</media:description>
+      <media:community>
+        <media:starRating count="120" average="4.9" min="1" max="5"/>
+        <media:statistics views="4210"/>
+      </media:community>
+    </media:group>
+  </entry>
+  <entry>
+    <id>yt:video:vid00000003</id>
+    <yt:videoId>vid00000003</yt:videoId>
+    <yt:channelId>UCabcdefghijklmnopqrstuv</yt:channelId>
+    <title>Wir bauen einen Medienserver -- Folge 3: Übertragung</title>
+    <link rel="alternate" href="https://www.youtube.com/watch?v=vid00000003"/>
+    <author>
+      <name>Alpha Channel</name>
+      <uri>https://www.youtube.com/channel/UCabcdefghijklmnopqrstuv</uri>
+    </author>
+    <published>2026-08-13T12:00:00+00:00</published>
+    <updated>2026-08-13T12:30:00+00:00</updated>
+    <media:group>
+      <media:title>Wir bauen einen Medienserver -- Folge 3: Übertragung</media:title>
+      <media:content url="https://www.youtube.com/v/vid00000003?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+      <media:thumbnail url="https://i4.ytimg.com/vi/vid00000003/hqdefault.jpg" width="480" height="360"/>
+      <media:description>Episode 3 of the homelab series.</media:description>
+      <media:community>
+        <media:starRating count="120" average="4.9" min="1" max="5"/>
+        <media:statistics views="4210"/>
+      </media:community>
+    </media:group>
+  </entry>
+  <entry>
+    <id>yt:video:vid00000004</id>
+    <yt:videoId>vid00000004</yt:videoId>
+    <yt:channelId>UCabcdefghijklmnopqrstuv</yt:channelId>
+    <title>The 13GB root partition problem</title>
+    <link rel="alternate" href="https://www.youtube.com/watch?v=vid00000004"/>
+    <author>
+      <name>Alpha Channel</name>
+      <uri>https://www.youtube.com/channel/UCabcdefghijklmnopqrstuv</uri>
+    </author>
+    <published>2026-08-12T12:00:00+00:00</published>
+    <updated>2026-08-12T12:30:00+00:00</updated>
+    <media:group>
+      <media:title>The 13GB root partition problem</media:title>
+      <media:content url="https://www.youtube.com/v/vid00000004?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+      <media:thumbnail url="https://i4.ytimg.com/vi/vid00000004/hqdefault.jpg" width="480" height="360"/>
+      <media:description>Episode 4 of the homelab series.</media:description>
+      <media:community>
+        <media:starRating count="120" average="4.9" min="1" max="5"/>
+        <media:statistics views="4210"/>
+      </media:community>
+    </media:group>
+  </entry>
+  <entry>
+    <id>yt:video:vid00000005</id>
+    <yt:videoId>vid00000005</yt:videoId>
+    <yt:channelId>UCabcdefghijklmnopqrstuv</yt:channelId>
+    <title>yt-dlp in 2026: what changed</title>
+    <link rel="alternate" href="https://www.youtube.com/watch?v=vid00000005"/>
+    <author>
+      <name>Alpha Channel</name>
+      <uri>https://www.youtube.com/channel/UCabcdefghijklmnopqrstuv</uri>
+    </author>
+    <published>2026-08-11T12:00:00+00:00</published>
+    <updated>2026-08-11T12:30:00+00:00</updated>
+    <media:group>
+      <media:title>yt-dlp in 2026: what changed</media:title>
+      <media:content url="https://www.youtube.com/v/vid00000005?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+      <media:thumbnail url="https://i4.ytimg.com/vi/vid00000005/hqdefault.jpg" width="480" height="360"/>
+      <media:description>Episode 5 of the homelab series.</media:description>
+      <media:community>
+        <media:starRating count="120" average="4.9" min="1" max="5"/>
+        <media:statistics views="4210"/>
+      </media:community>
+    </media:group>
+  </entry>
+  <entry>
+    <id>yt:video:vid00000006</id>
+    <yt:videoId>vid00000006</yt:videoId>
+    <yt:channelId>UCabcdefghijklmnopqrstuv</yt:channelId>
+    <title>Jellyfin hardware transcoding on weak hardware</title>
+    <link rel="alternate" href="https://www.youtube.com/watch?v=vid00000006"/>
+    <author>
+      <name>Alpha Channel</name>
+      <uri>https://www.youtube.com/channel/UCabcdefghijklmnopqrstuv</uri>
+    </author>
+    <published>2026-08-10T12:00:00+00:00</published>
+    <updated>2026-08-10T12:30:00+00:00</updated>
+    <media:group>
+      <media:title>Jellyfin hardware transcoding on weak hardware</media:title>
+      <media:content url="https://www.youtube.com/v/vid00000006?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+      <media:thumbnail url="https://i4.ytimg.com/vi/vid00000006/hqdefault.jpg" width="480" height="360"/>
+      <media:description>Episode 6 of the homelab series.</media:description>
+      <media:community>
+        <media:starRating count="120" average="4.9" min="1" max="5"/>
+        <media:statistics views="4210"/>
+      </media:community>
+    </media:group>
+  </entry>
+  <entry>
+    <id>yt:video:vid00000007</id>
+    <yt:videoId>vid00000007</yt:videoId>
+    <yt:channelId>UCabcdefghijklmnopqrstuv</yt:channelId>
+    <title>SQLite WAL mode explained</title>
+    <link rel="alternate" href="https://www.youtube.com/watch?v=vid00000007"/>
+    <author>
+      <name>Alpha Channel</name>
+      <uri>https://www.youtube.com/channel/UCabcdefghijklmnopqrstuv</uri>
+    </author>
+    <published>2026-08-09T12:00:00+00:00</published>
+    <updated>2026-08-09T12:30:00+00:00</updated>
+    <media:group>
+      <media:title>SQLite WAL mode explained</media:title>
+      <media:content url="https://www.youtube.com/v/vid00000007?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+      <media:thumbnail url="https://i4.ytimg.com/vi/vid00000007/hqdefault.jpg" width="480" height="360"/>
+      <media:description>Episode 7 of the homelab series.</media:description>
+      <media:community>
+        <media:starRating count="120" average="4.9" min="1" max="5"/>
+        <media:statistics views="4210"/>
+      </media:community>
+    </media:group>
+  </entry>
+  <entry>
+    <id>yt:video:vid00000008</id>
+    <yt:videoId>vid00000008</yt:videoId>
+    <yt:channelId>UCabcdefghijklmnopqrstuv</yt:channelId>
+    <title>Why your NAS keeps filling up</title>
+    <link rel="alternate" href="https://www.youtube.com/watch?v=vid00000008"/>
+    <author>
+      <name>Alpha Channel</name>
+      <uri>https://www.youtube.com/channel/UCabcdefghijklmnopqrstuv</uri>
+    </author>
+    <published>2026-08-08T12:00:00+00:00</published>
+    <updated>2026-08-08T12:30:00+00:00</updated>
+    <media:group>
+      <media:title>Why your NAS keeps filling up</media:title>
+      <media:content url="https://www.youtube.com/v/vid00000008?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+      <media:thumbnail url="https://i4.ytimg.com/vi/vid00000008/hqdefault.jpg" width="480" height="360"/>
+      <media:description>Episode 8 of the homelab series.</media:description>
+      <media:community>
+        <media:starRating count="120" average="4.9" min="1" max="5"/>
+        <media:statistics views="4210"/>
+      </media:community>
+    </media:group>
+  </entry>
+  <entry>
+    <id>yt:video:vid00000009</id>
+    <yt:videoId>vid00000009</yt:videoId>
+    <yt:channelId>UCabcdefghijklmnopqrstuv</yt:channelId>
+    <title>systemd units that survive a missing mount</title>
+    <link rel="alternate" href="https://www.youtube.com/watch?v=vid00000009"/>
+    <author>
+      <name>Alpha Channel</name>
+      <uri>https://www.youtube.com/channel/UCabcdefghijklmnopqrstuv</uri>
+    </author>
+    <published>2026-08-07T12:00:00+00:00</published>
+    <updated>2026-08-07T12:30:00+00:00</updated>
+    <media:group>
+      <media:title>systemd units that survive a missing mount</media:title>
+      <media:content url="https://www.youtube.com/v/vid00000009?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+      <media:thumbnail url="https://i4.ytimg.com/vi/vid00000009/hqdefault.jpg" width="480" height="360"/>
+      <media:description>Episode 9 of the homelab series.</media:description>
+      <media:community>
+        <media:starRating count="120" average="4.9" min="1" max="5"/>
+        <media:statistics views="4210"/>
+      </media:community>
+    </media:group>
+  </entry>
+  <entry>
+    <id>yt:video:vid00000010</id>
+    <yt:videoId>vid00000010</yt:videoId>
+    <yt:channelId>UCabcdefghijklmnopqrstuv</yt:channelId>
+    <title>RSS is still the best subscription protocol</title>
+    <link rel="alternate" href="https://www.youtube.com/watch?v=vid00000010"/>
+    <author>
+      <name>Alpha Channel</name>
+      <uri>https://www.youtube.com/channel/UCabcdefghijklmnopqrstuv</uri>
+    </author>
+    <published>2026-08-06T12:00:00+00:00</published>
+    <updated>2026-08-06T12:30:00+00:00</updated>
+    <media:group>
+      <media:title>RSS is still the best subscription protocol</media:title>
+      <media:content url="https://www.youtube.com/v/vid00000010?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+      <media:thumbnail url="https://i4.ytimg.com/vi/vid00000010/hqdefault.jpg" width="480" height="360"/>
+      <media:description>Episode 10 of the homelab series.</media:description>
+      <media:community>
+        <media:starRating count="120" average="4.9" min="1" max="5"/>
+        <media:statistics views="4210"/>
+      </media:community>
+    </media:group>
+  </entry>
+  <entry>
+    <id>yt:video:vid00000011</id>
+    <yt:videoId>vid00000011</yt:videoId>
+    <yt:channelId>UCabcdefghijklmnopqrstuv</yt:channelId>
+    <title>Docker bind mounts &lt;vs&gt; volumes</title>
+    <link rel="alternate" href="https://www.youtube.com/watch?v=vid00000011"/>
+    <author>
+      <name>Alpha Channel</name>
+      <uri>https://www.youtube.com/channel/UCabcdefghijklmnopqrstuv</uri>
+    </author>
+    <published>2026-08-05T12:00:00+00:00</published>
+    <updated>2026-08-05T12:30:00+00:00</updated>
+    <media:group>
+      <media:title>Docker bind mounts &lt;vs&gt; volumes</media:title>
+      <media:content url="https://www.youtube.com/v/vid00000011?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+      <media:thumbnail url="https://i4.ytimg.com/vi/vid00000011/hqdefault.jpg" width="480" height="360"/>
+      <media:description>Episode 11 of the homelab series.</media:description>
+      <media:community>
+        <media:starRating count="120" average="4.9" min="1" max="5"/>
+        <media:statistics views="4210"/>
+      </media:community>
+    </media:group>
+  </entry>
+  <entry>
+    <id>yt:video:vid00000012</id>
+    <yt:videoId>vid00000012</yt:videoId>
+    <yt:channelId>UCabcdefghijklmnopqrstuv</yt:channelId>
+    <title>A quiet week of homelab maintenance</title>
+    <link rel="alternate" href="https://www.youtube.com/watch?v=vid00000012"/>
+    <author>
+      <name>Alpha Channel</name>
+      <uri>https://www.youtube.com/channel/UCabcdefghijklmnopqrstuv</uri>
+    </author>
+    <published>2026-08-04T12:00:00+00:00</published>
+    <updated>2026-08-04T12:30:00+00:00</updated>
+    <media:group>
+      <media:title>A quiet week of homelab maintenance</media:title>
+      <media:content url="https://www.youtube.com/v/vid00000012?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+      <media:thumbnail url="https://i4.ytimg.com/vi/vid00000012/hqdefault.jpg" width="480" height="360"/>
+      <media:description>Episode 12 of the homelab series.</media:description>
+      <media:community>
+        <media:starRating count="120" average="4.9" min="1" max="5"/>
+        <media:statistics views="4210"/>
+      </media:community>
+    </media:group>
+  </entry>
+  <entry>
+    <id>yt:video:vid00000013</id>
+    <yt:videoId>vid00000013</yt:videoId>
+    <yt:channelId>UCabcdefghijklmnopqrstuv</yt:channelId>
+    <title>Short: one minute drive teardown</title>
+    <link rel="alternate" href="https://www.youtube.com/watch?v=vid00000013"/>
+    <author>
+      <name>Alpha Channel</name>
+      <uri>https://www.youtube.com/channel/UCabcdefghijklmnopqrstuv</uri>
+    </author>
+    <published>2026-08-03T12:00:00+00:00</published>
+    <updated>2026-08-03T12:30:00+00:00</updated>
+    <media:group>
+      <media:title>Short: one minute drive teardown</media:title>
+      <media:content url="https://www.youtube.com/v/vid00000013?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+      <media:thumbnail url="https://i4.ytimg.com/vi/vid00000013/hqdefault.jpg" width="480" height="360"/>
+      <media:description>Episode 13 of the homelab series.</media:description>
+      <media:community>
+        <media:starRating count="120" average="4.9" min="1" max="5"/>
+        <media:statistics views="4210"/>
+      </media:community>
+    </media:group>
+  </entry>
+  <entry>
+    <id>yt:video:vid00000014</id>
+    <yt:videoId>vid00000014</yt:videoId>
+    <yt:channelId>UCabcdefghijklmnopqrstuv</yt:channelId>
+    <title>Live: building the rack (archive)</title>
+    <link rel="alternate" href="https://www.youtube.com/watch?v=vid00000014"/>
+    <author>
+      <name>Alpha Channel</name>
+      <uri>https://www.youtube.com/channel/UCabcdefghijklmnopqrstuv</uri>
+    </author>
+    <published>2026-08-02T12:00:00+00:00</published>
+    <updated>2026-08-02T12:30:00+00:00</updated>
+    <media:group>
+      <media:title>Live: building the rack (archive)</media:title>
+      <media:content url="https://www.youtube.com/v/vid00000014?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+      <media:thumbnail url="https://i4.ytimg.com/vi/vid00000014/hqdefault.jpg" width="480" height="360"/>
+      <media:description>Episode 14 of the homelab series.</media:description>
+      <media:community>
+        <media:starRating count="120" average="4.9" min="1" max="5"/>
+        <media:statistics views="4210"/>
+      </media:community>
+    </media:group>
+  </entry>
+  <entry>
+    <id>yt:video:vid00000015</id>
+    <yt:videoId>vid00000015</yt:videoId>
+    <yt:channelId>UCabcdefghijklmnopqrstuv</yt:channelId>
+    <title>Backing up 2.6TB without a second drive</title>
+    <link rel="alternate" href="https://www.youtube.com/watch?v=vid00000015"/>
+    <author>
+      <name>Alpha Channel</name>
+      <uri>https://www.youtube.com/channel/UCabcdefghijklmnopqrstuv</uri>
+    </author>
+    <published>2026-08-01T12:00:00+00:00</published>
+    <updated>2026-08-01T12:30:00+00:00</updated>
+    <media:group>
+      <media:title>Backing up 2.6TB without a second drive</media:title>
+      <media:content url="https://www.youtube.com/v/vid00000015?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+      <media:thumbnail url="https://i4.ytimg.com/vi/vid00000015/hqdefault.jpg" width="480" height="360"/>
+      <media:description>Episode 15 of the homelab series.</media:description>
+      <media:community>
+        <media:starRating count="120" average="4.9" min="1" max="5"/>
+        <media:statistics views="4210"/>
+      </media:community>
+    </media:group>
+  </entry>
+</feed>
