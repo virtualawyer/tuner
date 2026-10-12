@@ -395,10 +395,10 @@ line, which is why GitHub lists Claude as a contributor.
 
 The first version was built against a written roadmap of 43 tasks in nine
 phases, each with its own check. Most of what came after was found by
-running it on my server with 32 channels: a burst of 32 feed requests that
-got the host blocked, YouTube refusing RSS altogether, 97 real failures
-traced to three causes, and AV1 files that made Jellyfin transcode. Each of
-those fixes came with a test that reproduces it.
+running it on my server with 32 channels: all 32 feeds requested back to
+back every half hour, YouTube refusing RSS to the whole server, 97 real
+failures traced to three causes, and AV1 files that made Jellyfin transcode.
+Each of those fixes came with a test that reproduces it.
 
 How it is kept honest:
 
