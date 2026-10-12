@@ -12,6 +12,10 @@ drive never fills up.
 Python standard library only: no pip packages, no database server, no
 JavaScript framework. The only outside programs are `yt-dlp` and `ffmpeg`.
 
+https://github.com/user-attachments/assets/8b091448-20ce-4ada-827b-3b823f966161
+
+*Tuner in 30 seconds. The narration is AI-generated; the screens are the built-in demo.*
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/hero-dark.png">
   <img alt="Tuner's page: library usage, the add-a-channel form, browse a channel, and a download in progress" src="docs/screenshots/hero-light.png">
