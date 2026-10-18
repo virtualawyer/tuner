@@ -659,6 +659,8 @@ def serve(cfg):
 
     app = build_app(cfg)
 
+    log.prune(app.conn)  # a database from before 0.6.1 may hold millions of events
+
     # Demo mode runs no threads: it must never poll YouTube or spawn yt-dlp.
     if not cfg.get("demo"):
         worker_module.sweep_tmp(cfg)

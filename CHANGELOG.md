@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.6.1 (2026-10-18)
+
+- **A media drive that drops off no longer fills the server's disk.** When
+  the USB drive behind the library fell off, its dead mount still reported
+  free space, every download crashed with an input/output error, and a
+  crashed download went straight back into the queue with no wait and no
+  attempt limit. Tuner retried one video about 7,500 times a minute, logging
+  each try, until the 13 GB system disk was full. Now Tuner checks that the
+  library can be read before each download: if it can't, downloads pause
+  with one line in the log and resume, with one more line, when the drive is
+  back, and the video in hand spends none of its attempts.
+- Any other crash now costs an attempt and waits its backoff like an
+  ordinary failure, and gives up after `max_attempts`.
+- The activity log trims itself to the newest 5,000 events (the trim
+  existed but was never called), and a database from an earlier version is
+  trimmed when 0.6.1 starts.
+- The Docker examples cap the container log at 3 x 10 MB.
+
 ## 0.6.0 (2026-10-11): first public release
 
 - **Other websites can no longer drive Tuner through your browser.** Every

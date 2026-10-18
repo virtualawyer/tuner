@@ -81,7 +81,7 @@ sudo docker compose up -d
 ### Without compose
 
 ```bash
-sudo docker run -d --name tuner --restart unless-stopped -p 8770:8770 -v /opt/tuner:/config -v /srv/media/YouTube:/media/youtube ghcr.io/virtualawyer/tuner:latest
+sudo docker run -d --name tuner --restart unless-stopped -p 8770:8770 --log-opt max-size=10m --log-opt max-file=3 -v /opt/tuner:/config -v /srv/media/YouTube:/media/youtube ghcr.io/virtualawyer/tuner:latest
 ```
 
 Keep the two `-v` flags the right way round: the config volume must not land

@@ -4,6 +4,7 @@ One video at a time, on purpose: the target box is an old Chromebook that
 also runs Jellyfin, and yt-dlp plus ffmpeg is enough load on its own.
 """
 
+import errno
 import os
 import shutil
 import threading
@@ -22,7 +23,31 @@ SIDECAR_EXTS = (".srt", ".vtt", ".jpg", ".jpeg", ".png", ".webp")
 
 IDLE_SECONDS = 5.0          # queue empty
 NO_SPACE_SECONDS = 60.0     # waiting for room on the drive
+LIBRARY_DOWN_SECONDS = 60.0  # the drive can't be read: check again in a minute
+CRASH_PAUSE_SECONDS = 5.0   # after a crash, never go straight round again
 SLICE_SECONDS = 1.0
+
+# What an unreadable library looks like: a USB drive that fell off the bus
+# leaves a dead mount behind (EIO), an unmounted one leaves nothing (ENOENT).
+LIBRARY_GONE = {errno.EIO, errno.ENOENT, errno.ENOTCONN, errno.ESTALE, errno.ENXIO,
+                errno.ENODEV, errno.EROFS}
+
+
+def library_problem(cfg):
+    """None when the library can be read, else why not.
+
+    statvfs still answers on a dead mount, so free space alone can't tell;
+    listing the folder can. A folder that isn't there at all is left to the
+    free-space guard, which defers the queue until the drive is mounted.
+    """
+    root = paths.library_root(cfg)
+    try:
+        os.listdir(root)
+    except FileNotFoundError:
+        return None
+    except OSError as exc:
+        return "%s: %s" % (root, exc.strerror or exc)
+    return None
 
 # What the worker is doing right now, for /api/state to read. One process,
 # one worker, so a module-level snapshot is enough.
@@ -135,6 +160,7 @@ class Worker(object):
         # row id -> epoch second before which it must not be claimed again.
         # In memory on purpose: a restart is a fresh start, not a penalty.
         self._backoff = {}
+        self.library_down = False    # logged once when it goes, once when it's back
 
     # --- timing ---
 
@@ -324,8 +350,47 @@ class Worker(object):
         discard_tmp(cfg, tmp)
         return final
 
+    def library_check(self):
+        """Pause while the library can't be read, saying so once each way."""
+        problem = library_problem(self.app.cfg)
+        if problem and not self.library_down:
+            log.error(self.app.conn, "the library can't be read (%s); downloads are paused "
+                      "until it is back" % problem)
+        elif not problem and self.library_down:
+            log.info(self.app.conn, "the library is readable again; downloads resume")
+        self.library_down = bool(problem)
+        return not problem
+
+    def on_crash(self, row, exc):
+        """A download that raised instead of failing. Returns the wait."""
+        conn = self.app.conn
+        if isinstance(exc, OSError) and exc.errno in LIBRARY_GONE \
+                and library_problem(self.app.cfg):
+            # The drive went away under it: not the video's fault, so no
+            # attempt is spent. The next pass pauses and says why.
+            db.set_video_status(conn, row["id"], db.QUEUED,
+                                error="library unreachable: %s" % exc)
+            return LIBRARY_DOWN_SECONDS
+
+        attempts = db.bump_attempts(conn, row["id"])
+        max_attempts = max(1, int(self.app.cfg.get("max_attempts", 3) or 1))
+        if attempts >= max_attempts:
+            db.set_video_status(conn, row["id"], db.FAILED, error="worker error: %s" % exc)
+            log.error(conn, "download crashed %d times, giving up on %s: %s"
+                      % (attempts, row["title"], exc),
+                      channel_row_id=row["channel_row_id"], video_id=row["video_id"])
+            return CRASH_PAUSE_SECONDS
+        delay = self.back_off(row["id"], attempts)
+        db.set_video_status(conn, row["id"], db.QUEUED, error="worker error: %s" % exc)
+        log.error(conn, "download crashed for %s (attempt %d), retrying in %ds: %s"
+                  % (row["title"], attempts, delay, exc),
+                  channel_row_id=row["channel_row_id"], video_id=row["video_id"])
+        return CRASH_PAUSE_SECONDS
+
     def _once(self):
         """One pass. Returns the seconds to wait before the next."""
+        if not self.library_check():
+            return LIBRARY_DOWN_SECONDS
         if not disk.has_headroom(self.app.cfg):
             row = self.claim()
             if row is not None:
@@ -343,15 +408,10 @@ class Worker(object):
             self.handle(row)
             self.completed += 1
         except Exception as exc:
-            # A crash must never leave a row stuck in DOWNLOADING.
-            attempts = db.bump_attempts(self.app.conn, row["id"])
-            db.set_video_status(self.app.conn, row["id"], db.QUEUED,
-                                error="worker error: %s" % exc)
-            log.error(self.app.conn,
-                      "download crashed for %s (attempt %d): %s"
-                      % (row["title"], attempts, exc),
-                      channel_row_id=row["channel_row_id"],
-                      video_id=row["video_id"])
+            # A crash must never leave a row stuck in DOWNLOADING, and must
+            # never turn into a tight loop: it pays an attempt and a backoff
+            # like any failure, unless the drive itself has gone.
+            return self.on_crash(row, exc)
         finally:
             set_current(None)
         return 0.0

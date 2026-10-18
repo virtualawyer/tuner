@@ -46,7 +46,10 @@ def event(conn, level, message, channel_row_id=None, video_id=None):
                 " VALUES (?,?,?,?,?)",
                 (stamp, level, channel_row_id, video_id, message))
             conn.commit()
-            return cur.lastrowid
+            row_id = cur.lastrowid
+        if row_id and row_id % PRUNE_EVERY == 0:
+            prune(conn)
+        return row_id
     except Exception:  # pragma: no cover - a broken log must not break the app
         return None
 
@@ -69,8 +72,15 @@ def recent(conn, limit=200):
         "SELECT * FROM events ORDER BY id DESC LIMIT ?", (int(limit),)).fetchall()
 
 
-def prune(conn, keep=5000):
+# Trim to the newest KEEP_EVENTS every PRUNE_EVERY events. (Until 0.6.1
+# nothing called prune, and a retry loop wrote 4.5 million rows.)
+KEEP_EVENTS = 5000
+PRUNE_EVERY = 500
+
+
+def prune(conn, keep=None):
     """Keep the log from growing without bound on a long-running box."""
+    keep = KEEP_EVENTS if keep is None else keep
     with db._LOCK:
         conn.execute(
             "DELETE FROM events WHERE id NOT IN"

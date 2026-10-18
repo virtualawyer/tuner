@@ -33,3 +33,10 @@ services:
     # Jellyfin and anything else on the box.
     cpus: 1.5
     mem_limit: 1g
+
+    # Docker keeps container logs on the system disk with no limit unless told.
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"

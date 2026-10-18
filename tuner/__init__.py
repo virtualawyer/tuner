@@ -9,7 +9,7 @@ Standard library only. Runs on stock Debian python3.
 
 import threading
 
-VERSION = "0.6.0"
+VERSION = "0.6.1"
 PROJECT_URL = "https://github.com/virtualawyer/tuner"
 # Says who is asking and where to read about it, on every feed request.
 USER_AGENT = "Tuner/%s (+%s)" % (VERSION, PROJECT_URL)
